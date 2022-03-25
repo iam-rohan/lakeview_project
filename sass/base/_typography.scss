@@ -2,6 +2,7 @@
 	color:$white;
 	margin-bottom:2.5rem;
 	font-weight:400;
+	position:absolute;
 	
 	&--main {
 		font-size:7rem;
@@ -15,6 +16,21 @@
 		font-family:"Satisfy",serif;
 		font-size:2.6rem;
 	}
+
+	@include respond(laptops) {
+		margin-top: 1rem;
+		left:50%;
+		transform:translate(-50%,-50%);
+		text-align:center;
+	}
+
+	@include respond(big-desktop) {
+		margin-top: 3rem;
+		left:50%;
+		transform:translate(-50%,-50%);
+		text-align:center;
+	}
+
 }
 
 .heading-secondary {
@@ -29,6 +45,14 @@
 	&:hover {
 		transform: skewY(2deg) skewX(15deg) scale(1.1);
 		text-shadow:.5rem 2rem 2rem rgba($black, .2);
+	}
+
+	@include respond(laptops) {
+		margin-bottom: 6rem;
+	}
+
+	@include respond(big-desktop) {
+		margin-bottom: 10rem;
 	}
 }
 
