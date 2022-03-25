@@ -16,11 +16,13 @@
 		z-index:10;
 		outline-offset:1.5rem;
 		transition: all .3s;
+		margin-top:5rem;
 
 		@include respond(tab-port) {
 			height:15rem;
 			width: 33.33%;
 			position:relative;
+			margin-top: 1rem;
 		}
 
 		&--1 {
