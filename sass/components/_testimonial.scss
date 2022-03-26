@@ -11,13 +11,20 @@
 	}
 
 	&__shape {
-		width:15rem;
-		height:15rem;
 		float:left;
-		-webkit-clip-path:circle(90% at 3% 8%);
-		-webkit-shape-outside:circle(100% at 3% 8%);
-		position:relative;
-		transform:translate(-3rem);
+
+		width:10rem;
+		height:10rem;
+
+		@supports (-webkit-shape-outside:circle()) or (shape-outside:circle()) {
+			width:15rem;
+			height:15rem;
+			-webkit-clip-path:circle(90% at 3% 8%);
+			-webkit-shape-outside:circle(100% at 3% 8%);
+			position:relative;
+			
+			transform:translate(-3rem);
+		}
 	}
 
 	&__image {
